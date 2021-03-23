@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="author" content="" />
+    <title>
+    </title>
+    <script src="./jquery-1.3.2.min.js">
+    </script>
+    <!-- <script src="./flexible.js"></script> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #dataCollectionWrapper {
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        #dataCollectionWrapper ul {
+            list-style: none;
+        }
+
+        .display-b {
+            display: block;
+        }
+
+        #dataCollectionWrapper li {
+            margin-bottom: 10px;
+        }
+
+        #dataCollectionWrapper label {
+            display:block;
+            font-weight: normal;
+            padding-right: 5px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input[type='text'] {
+            border: 1px solid #d7d7d7;
+            height: 24px;
+            line-height: 24px;
+            background: #fff;
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+        .dataCollection-checkbox-wrapper span {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="dataCollectionWrapper">
+        <ul>
+            <li>
+                <label for="name">
+                    姓名:
+                </label>
+                <input type="text" name="name" placeholder="请输入姓名" />
+            </li>
+            <li>
+                <label for="sex">
+                    性别:
+                </label>
+                <input type="text" name="sex" placeholder="请输入性别" />
+            </li>
+            <li>
+                <label for="nationality">
+                    民族:
+                </label>
+                <input type="text" name="nationality" placeholder="请输入民族" />
+            </li>
+            <li>
+                <label for="phoneNumber">
+                    联系电话:
+                </label>
+                <input type="text" name="phoneNumber" placeholder="请输入联系电话" />
+            </li>
+            <li>
+                <label for="idCard">
+                    身份证号码:
+                </label>
+                <input type="text" name="idCard" placeholder="请输入身份证号码" />
+            </li>
+            <li>
+                <label for="politicalStatus">
+                    政治面貌:
+                </label>
+                <input type="text" name="politicalStatus" placeholder="请输入政治面貌" />
+            </li>
+            <li>
+                <label for="">
+                    身高:
+                </label>
+                <input type="text" name="" placeholder="请输入身高" />
+                CM
+            </li>
+            <li>
+                <label for="">
+                    体重:
+                </label>
+                <input type="text" name="" placeholder="请输入体重" />
+                KG
+            </li>
+            <li>
+                <label for="">
+                    现居地址:
+                </label>
+                <input type="text" name="" placeholder="省市区街道社区" />
+            </li>
+            <li>
+                <label for="">
+                    子:
+                </label>
+                <input type="text" name="" placeholder="请输入子数量" />
+            </li>
+            <li>
+                <label for="">
+                    女:
+                </label>
+                <input type="text" name="" placeholder="请输入女数量" />
+            </li>
+            <li>
+                <label for="">
+                    子女姓名/电话:
+                </label>
+                <input type="text" name="" placeholder="请输入子女姓名/电话" />
+            </li>
+            <li>
+                <label for="">
+                    收入/月:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <!-- input[type="checkbox"][name=""][value=""] -->
+                    <p><input type="radio" name="incomeRange" value="无"><span>无</span></p>
+                    <p><input type="radio" name="incomeRange" value="1000以下"><span>1000以下</span></p>
+                    <p><input type="radio" name="incomeRange" value="1000-3000"><span>1000-3000</span></p>
+                    <p><input type="radio" name="incomeRange" value="3000-5000"><span>3000-5000</span></p>
+                    <p><input type="radio" name="incomeRange" value="5000-10000"><span>5000-10000</span></p>
+                    <p><input type="radio" name="incomeRange" value="10000以上"><span>10000以上</span></p>
+                </div>
+            </li>
+            <li>
+                <label for="">
+                    文化程度:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <p><input type="radio" name="educationLevel" value="小学以下"><span>小学以下</span></p>
+                    <p><input type="radio" name="educationLevel" value="初中"><span>初中</span></p>
+                    <p><input type="radio" name="educationLevel" value="高中"><span>高中</span></p>
+                    <p><input type="radio" name="educationLevel" value="中专"><span>中专</span></p>
+                    <p><input type="radio" name="educationLevel" value="大专"><span>大专</span></p>
+                    <p><input type="radio" name="educationLevel" value="本科"><span>本科</span></p>
+                    <p><input type="radio" name="educationLevel" value="硕士"><span>硕士</span></p>
+                    <p><input type="radio" name="educationLevel" value="博士"><span>博士</span></p>
+                </div>
+            </li>
+            <li>
+                <label for="">
+                    职业:
+                </label>
+                        
+                <p><input type="radio" name="profession" value="农民"><span>农民</span></p>
+                <p><input type="radio" name="profession" value="工人"><span>工人</span></p>
+                <p><input type="radio" name="profession" value="公务员"><span>公务员</span></p>
+                <p><input type="radio" name="profession" value="教师"><span>教师</span></p>
+                <p><input type="radio" name="profession" value="工程师"><span>工程师</span></p>
+                <p><input type="radio" name="profession" value="企业主"><span>企业主</span></p>
+                <p><input type="radio" name="profession" value="个人工商户"><span>个人工商户</span></p>
+                <p><input type="radio" name="profession" value="企事业单位员工"><span>企事业单位员工</span></p>
+                <p><input type="radio" name="profession" value="其他"><span>其他</span></p>
+            </li>
+            <li>
+                <label for="">
+                    居住情况:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <!-- <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span> -->
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    爱好舞蹈类（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    爱好体育类（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    爱好声乐类（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    爱好技能类（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    爱好书画摄影类（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    旅游爱好（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    旅游时间偏好（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">
+                    最喜欢旅游类型:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">
+                    最想去旅游线:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    常用的新闻客户端（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    常用的短视频APP（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    身体状况（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    慢性病（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    骨骼疾病（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    肾脏泌尿疾病（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    心脏疾病（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    眼部疾病（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    健康需求（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="" class="display-b label-checkbox">
+                    主要消费（可多选）:
+                </label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">营养品消费需求:</label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">家庭适老化改造需求:</label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">采集时间:</label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">地点:</label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+            <li>
+                <label for="">记录人:</label>
+                <div class="dataCollection-checkbox-wrapper">
+                    <input type="checkbox" name="" id="" value="daan">
+                    <span>答案</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
